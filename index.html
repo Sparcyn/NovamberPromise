@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="رحلة خلف الكواليس - فيلم عُمان القصير | كيف تحولت الصور الحقيقية إلى رسوم متحركة ثلاثية الأبعاد بالذكاء الاصطناعي">
+    <meta name="author" content="يوسف محمد صبح">
+    <title>خلف الكواليس - فيلم عُمان القصير</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome for high-quality icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Image Comparison Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css">
+</head>
+
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-container" id="progressContainer">
+        <div class="progress-bar" id="progressBar"></div>
+        <div class="progress-text" id="progressText">
+            <i class="fas fa-eye"></i>
+            <span id="viewedCount">0</span> / <span id="totalCount">0</span> تم المشاهدة
+            <span style="margin: 0 0.5rem;">•</span>
+            <i class="fas fa-percentage"></i>
+            <span id="progressPercentage">0%</span>
+        </div>
+    </div>
+
+    <!-- Navigation Icons -->
+    <nav class="floating-nav" id="floatingNav">
+        <button class="nav-icon-btn" onclick="showWelcomeMessage()" title="رسالة الترحيب">
+            <i class="fas fa-envelope"></i>
+        </button>
+        <button class="nav-icon-btn" onclick="scrollToSection('hero')" title="الرئيسية">
+            <i class="fas fa-home"></i>
+        </button>
+        <button class="nav-icon-btn" onclick="scrollToSection('places')" title="الأماكن">
+            <i class="fas fa-map-marker-alt"></i>
+        </button>
+        <button class="nav-icon-btn" onclick="scrollToSection('characters')" title="الشخصيات">
+            <i class="fas fa-users"></i>
+        </button>
+        <button class="nav-icon-btn" onclick="scrollToSection('audio')" title="الصوتيات">
+            <i class="fas fa-music"></i>
+        </button>
+        <button class="nav-icon-btn" onclick="scrollToSection('final-film')" title="الفيلم">
+            <i class="fas fa-film"></i>
+        </button>
+        <button class="nav-icon-btn theme-toggle" onclick="toggleTheme()" title="تبديل الوضع">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="nav-icon-btn" onclick="toggleFullscreen()" title="ملء الشاشة">
+            <i class="fas fa-expand"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">فيلم قصير</div>
+            <h1 class="hero-title">
+                <span class="title-line">رحلة خلف</span>
+                <span class="title-line highlight">الكواليس</span>
+            </h1>
+            <p class="hero-subtitle">من الواقع إلى الخيال • بالذكاء الاصطناعي</p>
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar-alt meta-icon"></i>
+                    <span>٢٨ نوفمبر ٢٠٢٥</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-school meta-icon"></i>
+                    <span>مدرسة الإمام المهنا بن سلطان</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-film meta-icon"></i>
+                    <span>يوسف محمد صبح</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <button class="cta-button" onclick="scrollToSection('journey')">
+                    <span>ابدأ الرحلة</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 4L10 16M10 16L4 10M10 16L16 10" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="cta-button secondary" onclick="shareWebsite()">
+                    <i class="fas fa-share-alt"></i>
+                    <span>مشاركة</span>
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="journey" id="journey">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">القصة</span>
+                <h2 class="section-title">رحلة الإبداع</h2>
+                <p class="section-description">
+                    في يوم واحد، تحولت الصور الحقيقية إلى عالم من الرسوم المتحركة الثلاثية الأبعاد
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>الفكرة</h4>
+                        <p>بدأت الفكرة بحلم بسيط</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>جمع الشخصيات من الواقع</h4>
+                        <p>تصوير الشخصيات الحقيقية</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>كتابة السيناريو</h4>
+                        <p>تطوير القصة والحوار</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>توليد صور المشاهد</h4>
+                        <p>تحويل الصور بالذكاء الاصطناعي</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>تحويل الصور إلى فيديوهات</h4>
+                        <p>تحريك المشاهد بالذكاء الاصطناعي</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>المونتاج</h4>
+                        <p>تجميع المشاهد والمونتاج النهائي</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>الإنجاز</h4>
+                        <p>تمام الساعة ١١:٠٠ مساءً بتوقيت عُمان</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Counter -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-images"></i></div>
+                    <div class="stat-number" data-target="10">0</div>
+                    <div class="stat-label">أماكن تم تحويلها</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-user-friends"></i></div>
+                    <div class="stat-number" data-target="6">0</div>
+                    <div class="stat-label">شخصيات</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">ساعة عمل</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-magic"></i></div>
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">% ذكاء اصطناعي</div>
+                </div>
+            </div>
+
+            <div class="journey-grid">
+                <div class="journey-card">
+                    <div class="journey-icon"><i class="fas fa-camera-retro"></i></div>
+                    <h3>الخطوة الأولى</h3>
+                    <p>التقاط الصور الحقيقية من الأماكن والشخصيات في عُمان</p>
+                </div>
+                <div class="journey-card">
+                    <div class="journey-icon"><i class="fas fa-robot"></i></div>
+                    <h3>التحويل بالذكاء الاصطناعي</h3>
+                    <p>تحويل الصور إلى رسوم كرتونية ثلاثية الأبعاد باستخدام تقنيات الذكاء الاصطناعي</p>
+                </div>
+                <div class="journey-card">
+                    <div class="journey-icon"><i class="fas fa-video"></i></div>
+                    <h3>التحريك والإنتاج</h3>
+                    <p>تحريك الشخصيات والمشاهد بالذكاء الاصطناعي لإنتاج الفيلم النهائي</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Places Section -->
+    <section class="places" id="places">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">الأماكن</span>
+                <h2 class="section-title">تحويل الأماكن</h2>
+                <p class="section-description">
+                    شاهد كيف تحولت الأماكن الحقيقية في عُمان إلى مشاهد كرتونية ساحرة
+                </p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="ابحث عن مكان..." onkeyup="searchPlaces()">
+                    <button class="clear-search" onclick="clearSearch()" style="display: none;">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterPlaces('all')">
+                    <i class="fas fa-th"></i> الكل
+                </button>
+                <button class="filter-btn" onclick="filterPlaces('converted')">
+                    <i class="fas fa-magic"></i> محولة
+                </button>
+                <button class="filter-btn" onclick="filterPlaces('film')">
+                    <i class="fas fa-film"></i> من الفيلم
+                </button>
+            </div>
+
+            <div class="places-grid">
+                <!-- Arab Sea -->
+                <div class="place-card" data-item-id="place-arab-sea" data-place-id="arab-sea" data-category="converted">
+                    <div class="place-image-container">
+                        <img-comparison-slider class="card-comparison-slider" value="50">
+                            <img slot="first" src="Places Converted/Converted/Arab Sea.png"
+                                alt="البحر العربي - بعد التحويل" class="place-image" />
+                            <img slot="second" src="Places Converted/REAL/Arab sea.jpg"
+                                alt="البحر العربي - الصورة الأصلية" class="place-image-real" />
+                        </img-comparison-slider>
+                        <button class="preview-btn" onclick="openComparison('arab-sea')" title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                        <button class="video-play-btn-card" onclick="playPlaceVideo('arab-sea')" title="تشغيل الفيديو"
+                            style="display: none;">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-name">البحر العربي</h3>
+                    </div>
+                </div>
+
+                <!-- Misfat Al Abriyeen -->
+                <div class="place-card" data-item-id="place-misfat" data-place-id="misfat" data-category="converted">
+                    <div class="place-image-container">
+                        <img-comparison-slider class="card-comparison-slider" value="50">
+                            <img slot="first" src="Places Converted/Converted/Misfat-Al-Abriyeen – Oman's Mountain Oasis Village.png"
+                                alt="مسفاة العبريين - بعد التحويل" class="place-image" />
+                            <img slot="second" src="Places Converted/REAL/Misfat-Al-Abriyeen – Oman's Mountain Oasis Village.webp"
+                                alt="مسفاة العبريين - الصورة الأصلية" class="place-image-real" />
+                        </img-comparison-slider>
+                        <button class="preview-btn" onclick="openComparison('misfat')" title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                        <button class="video-play-btn-card" onclick="playPlaceVideo('misfat')" title="تشغيل الفيديو">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-name">مسفاة العبريين</h3>
+                    </div>
+                </div>
+
+                <!-- Nazwa 1 -->
+                <div class="place-card" data-item-id="place-nazwa1" data-place-id="nazwa1" data-category="converted">
+                    <div class="place-image-container">
+                        <img-comparison-slider class="card-comparison-slider" value="50">
+                            <img slot="first" src="Places Converted/Converted/Nazwa 1.png" alt="نزوى 1 - بعد التحويل"
+                                class="place-image" />
+                            <img slot="second" src="Places Converted/REAL/Nazwa 1.png" alt="نزوى 1 - الصورة الأصلية"
+                                class="place-image-real" />
+                        </img-comparison-slider>
+                        <button class="preview-btn" onclick="openComparison('nazwa1')" title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                        <button class="video-play-btn-card" onclick="playPlaceVideo('nazwa1')" title="تشغيل الفيديو">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-name">نزوى 1</h3>
+                        <span class="inspiration-badge">مصدر إلهام للمكان</span>
+                    </div>
+                </div>
+
+                <!-- Nazwa 2 -->
+                <div class="place-card" data-item-id="place-nazwa2" data-place-id="nazwa2" data-category="converted">
+                    <div class="place-image-container">
+                        <img-comparison-slider class="card-comparison-slider" value="50">
+                            <img slot="first" src="Places Converted/Converted/Nazwa 2.png" alt="نزوى 2 - بعد التحويل"
+                                class="place-image" />
+                            <img slot="second" src="Places Converted/REAL/Nazwa 2.png" alt="نزوى 2 - الصورة الأصلية"
+                                class="place-image-real" />
+                        </img-comparison-slider>
+                        <button class="preview-btn" onclick="openComparison('nazwa2')" title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                        <button class="video-play-btn-card" onclick="playPlaceVideo('nazwa2')" title="تشغيل الفيديو">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-name">نزوى 2</h3>
+                    </div>
+                </div>
+
+                <!-- Nazwa 3 -->
+                <div class="place-card" data-item-id="place-nazwa3" data-place-id="nazwa3" data-category="converted">
+                    <div class="place-image-container">
+                        <img-comparison-slider class="card-comparison-slider" value="50">
+                            <img slot="first" src="Places Converted/Converted/Nazwa 3.png" alt="نزوى 3 - بعد التحويل"
+                                class="place-image" />
+                            <img slot="second" src="Places Converted/REAL/Nazwa 3.png" alt="نزوى 3 - الصورة الأصلية"
+                                class="place-image-real" />
+                        </img-comparison-slider>
+                        <button class="preview-btn" onclick="openComparison('nazwa3')" title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                        <button class="video-play-btn-card" onclick="playPlaceVideo('nazwa3')" title="تشغيل الفيديو">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-name">نزوى 3</h3>
+                        <span class="inspiration-badge">مصدر إلهام للمكان</span>
+                    </div>
+                </div>
+
+                <!-- Sohar Fort -->
+                <div class="place-card" data-item-id="place-sohar" data-place-id="sohar" data-category="converted">
+                    <div class="place-image-container">
+                        <img-comparison-slider class="card-comparison-slider" value="50">
+                            <img slot="first" src="Places Converted/Converted/Suhar fort.png"
+                                alt="قلعة صحار - بعد التحويل" class="place-image" />
+                            <img slot="second" src="Places Converted/REAL/Museum of Sohar Fort.webp"
+                                alt="قلعة صحار - الصورة الأصلية" class="place-image-real" />
+                        </img-comparison-slider>
+                        <button class="preview-btn" onclick="openComparison('sohar')" title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                        <button class="video-play-btn-card" onclick="playPlaceVideo('sohar')" title="تشغيل الفيديو">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-name">قلعة صحار</h3>
+                    </div>
+                </div>
+
+                <!-- Film Locations -->
+                <div class="place-card" data-item-id="place-bathroom" data-category="film">
+                    <div class="place-image-container">
+                        <img src="Places on the film/BathRoom.png" alt="الحمام" class="place-image">
+                        <button class="preview-btn" onclick="previewImage('Places on the film/BathRoom.png', 'الحمام')"
+                            title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-name">الحمام</h3>
+                        <span class="film-badge">مشهد من الفيلم</span>
+                    </div>
+                </div>
+
+                <div class="place-card" data-item-id="place-bus" data-category="film">
+                    <div class="place-image-container">
+                        <img src="Places on the film/Bus Station.png" alt="محطة الحافلات" class="place-image">
+                        <button class="preview-btn"
+                            onclick="previewImage('Places on the film/Bus Station.png', 'محطة الحافلات')"
+                            title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-name">محطة الحافلات</h3>
+                        <span class="film-badge">مشهد من الفيلم</span>
+                    </div>
+                </div>
+
+                <div class="place-card" data-item-id="place-room" data-category="film">
+                    <div class="place-image-container">
+                        <img src="Places on the film/Youssef Room.jpg" alt="غرفة يوسف" class="place-image">
+                        <button class="preview-btn"
+                            onclick="previewImage('Places on the film/Youssef Room.jpg', 'غرفة يوسف')"
+                            title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-name">غرفة يوسف</h3>
+                        <span class="film-badge">مشهد من الفيلم</span>
+                    </div>
+                </div>
+
+                <!-- Oman Mall -->
+                <div class="place-card" data-item-id="place-mall" data-category="film">
+                    <div class="place-image-container">
+                        <img src="Places Converted/Converted/Oman Mall.jpg" alt="عمان مول" class="place-image">
+                        <button class="preview-btn"
+                            onclick="previewImage('Places Converted/Converted/Oman Mall.jpg', 'عمان مول')"
+                            title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="place-content">
+                        <h3 class="place-name">عمان مول</h3>
+                        <span class="film-badge">مشهد من الفيلم</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section class="characters" id="characters">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">الشخصيات</span>
+                <h2 class="section-title">تحويل الشخصيات</h2>
+                <p class="section-description">
+                    من الواقع إلى عالم الرسوم المتحركة - شاهد كيف تحولت الشخصيات الحقيقية
+                </p>
+            </div>
+
+            <div class="characters-grid">
+                <!-- Youssef -->
+                <div class="character-card" data-item-id="char-youssef">
+                    <div class="character-image-container">
+                        <img src="شخصيات في الفيلم/Converted/Youssef.png" alt="يوسف - نسخة الذكاء الاصطناعي"
+                            class="character-image">
+                        <button class="preview-btn"
+                            onclick="previewCharacterImage('شخصيات في الفيلم/Converted/Youssef.png', 'يوسف صبح')"
+                            title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="character-content">
+                        <h3 class="character-name">يوسف</h3>
+                        <p class="character-role">الشخصية الرئيسية</p>
+                    </div>
+                </div>
+
+                <!-- Mr. Waleed Al-Ghafri -->
+                <div class="character-card" data-item-id="char-waleed" data-character-id="waleed">
+                    <div class="character-image-container">
+                        <img src="شخصيات في الفيلم/Converted/أ.وليد الغافري.jpg"
+                            alt="أ. وليد الغافري - نسخة الذكاء الاصطناعي" class="character-image">
+                        <div class="version-buttons">
+                            <button class="version-btn active" onclick="switchCharacterVersion('waleed', 0)">v1</button>
+                            <button class="version-btn" onclick="switchCharacterVersion('waleed', 1)">v2</button>
+                        </div>
+                        <button class="preview-btn" onclick="openCharacterComparison('waleed')" title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="character-content">
+                        <h3 class="character-name">أ. وليد الغافري</h3>
+                        <p class="character-role">المدير</p>
+                    </div>
+                </div>
+
+                <!-- Mr. Sulaiman Al-Jabri -->
+                <div class="character-card" data-item-id="char-sulaiman" data-character-id="sulaiman">
+                    <div class="character-image-container">
+                        <img src="شخصيات في الفيلم/Converted/أ.سليمان الجابري.png"
+                            alt="أ. سليمان الجابري - نسخة الذكاء الاصطناعي" class="character-image">
+                        <button class="preview-btn" onclick="openCharacterComparison('sulaiman')" title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="character-content">
+                        <h3 class="character-name">أ. سليمان الجابري</h3>
+                        <p class="character-role">المدير المساعد</p>
+                    </div>
+                </div>
+
+                <!-- T. Khaled Al-Hassani -->
+                <div class="character-card" data-item-id="char-khaled" data-character-id="khaled">
+                    <div class="character-image-container">
+                        <img src="شخصيات في الفيلم/Converted/T.Khaled Al-Hassani.png"
+                            alt="أ. خالد الحسني - نسخة الذكاء الاصطناعي" class="character-image">
+                        <div class="version-buttons">
+                            <button class="version-btn active" onclick="switchCharacterVersion('khaled', 0)">v1</button>
+                            <button class="version-btn" onclick="switchCharacterVersion('khaled', 1)">v2</button>
+                            <button class="version-btn" onclick="switchCharacterVersion('khaled', 2)">v3</button>
+                        </div>
+                        <button class="preview-btn" onclick="openCharacterComparison('khaled')" title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="character-content">
+                        <h3 class="character-name">أ. خالد الحسني</h3>
+                        <p class="character-role">معلم</p>
+                    </div>
+                </div>
+
+                <!-- Stu -->
+                <div class="character-card" data-item-id="char-stu" data-character-id="stu">
+                    <div class="character-image-container">
+                        <img src="شخصيات في الفيلم/Converted/Stu.jpg" alt="Stu - نسخة الذكاء الاصطناعي"
+                            class="character-image">
+                        <div class="version-buttons">
+                            <button class="version-btn active" onclick="switchCharacterVersion('stu', 0)">v1</button>
+                            <button class="version-btn" onclick="switchCharacterVersion('stu', 1)">v2</button>
+                        </div>
+                        <button class="preview-btn" onclick="openCharacterComparison('stu')" title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="character-content">
+                        <h3 class="character-name">Stu</h3>
+                        <p class="character-role">طالب</p>
+                    </div>
+                </div>
+
+                <!-- T. Omar Alzahiri (Not in film) -->
+                <div class="character-card not-included" data-item-id="char-omar" data-character-id="omar">
+                    <div class="character-image-container">
+                        <img src="شخصيات في الفيلم/Converted/T.Omar Alzahiri.png"
+                            alt="أ. عمر الظاهري - نسخة الذكاء الاصطناعي" class="character-image">
+                        <div class="not-included-badge"><i class="fas fa-ban"></i> لم يُدرج في الفيلم</div>
+                        <button class="preview-btn" onclick="openCharacterComparison('omar')" title="معاينة كاملة">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="character-content">
+                        <h3 class="character-name">أ. عمر الظاهري</h3>
+                        <p class="character-role">لم يتم الحصول على الإذن</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Demonstration -->
+            <div class="ai-demo">
+                <div class="ai-demo-content">
+                    <span class="section-badge">عرض توضيحي</span>
+                    <h3>القدرات الواقعية للذكاء الاصطناعي</h3>
+                    <p>
+                        بسبب أسلوب الرسم المستخدم، لم نتمكن من تحديد ملامح الوجه بوضوح تام.
+                        لإظهار قدراتنا، قمنا بإنشاء صورة واقعية باستخدام الذكاء الاصطناعي وعرضناها على المدير.
+                    </p>
+                    <div class="ai-demo-image" data-item-id="ai-demo">
+                        <img src="شخصيات في الفيلم/Converted/صورة و اقعيةبالذكاء الاصطناعي اهذا ل أ.سليمان الجابري.jpg"
+                            alt="صورة واقعية بالذكاء الاصطناعي - أ. سليمان الجابري">
+                        <div class="ai-demo-label">صورة واقعية بالذكاء الاصطناعي - أ. سليمان الجابري</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Section -->
+    <section class="audio" id="audio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">الصوتيات</span>
+                <h2 class="section-title">تجربة صوتية</h2>
+                <p class="section-description">
+                    استمع إلى الموسيقى والخطاب المستخدم في الفيلم
+                </p>
+            </div>
+
+            <div class="audio-grid">
+                <!-- Oman the Proud -->
+                <div class="audio-card premium-audio" data-item-id="audio-oman">
+                    <div class="audio-header">
+                        <div class="audio-icon"><i class="fas fa-music"></i></div>
+                        <div class="audio-info">
+                            <h3 class="audio-title">عُمان الأبية</h3>
+                            <p class="audio-description">الموسيقى الرئيسية المستخدمة في الفيلم</p>
+                        </div>
+                    </div>
+                    <div class="premium-player" id="premium-player-oman">
+                        <audio id="audio-oman-player" src="الاصوات/عمان الأبية (320 KBps).mp3"></audio>
+                        <div class="player-controls">
+                            <button class="play-btn" onclick="togglePlay('oman')">
+                                <i class="fas fa-play" id="play-icon-oman"></i>
+                            </button>
+                            <div class="player-timeline">
+                                <div class="timeline-bar">
+                                    <div class="timeline-progress" id="progress-oman"></div>
+                                </div>
+                                <div class="timeline-time">
+                                    <span id="current-time-oman">0:00</span>
+                                    <span id="duration-oman">0:00</span>
+                                </div>
+                            </div>
+                            <div class="player-volume">
+                                <button class="volume-btn" onclick="toggleMute('oman')">
+                                    <i class="fas fa-volume-up" id="volume-icon-oman"></i>
+                                </button>
+                                <input type="range" class="volume-slider" id="volume-oman" min="0" max="100" value="100"
+                                    onchange="changeVolume('oman')">
+                            </div>
+                        </div>
+                        <div class="audio-wave">
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radio Speech -->
+                <div class="audio-card premium-audio" data-item-id="audio-speech">
+                    <div class="audio-header">
+                        <div class="audio-icon"><i class="fas fa-microphone"></i></div>
+                        <div class="audio-info">
+                            <h3 class="audio-title">خطاب يوسف في الإذاعة المدرسية</h3>
+                            <p class="audio-description">الخطاب الصوتي المستخدم في الفيلم</p>
+                        </div>
+                    </div>
+                    <div class="premium-player" id="premium-player-speech">
+                        <audio id="audio-speech-player" src="الاصوات/خطاب يوسف في الاذاعة المدرسية.mp3"></audio>
+                        <div class="player-controls">
+                            <button class="play-btn" onclick="togglePlay('speech')">
+                                <i class="fas fa-play" id="play-icon-speech"></i>
+                            </button>
+                            <div class="player-timeline">
+                                <div class="timeline-bar">
+                                    <div class="timeline-progress" id="progress-speech"></div>
+                                </div>
+                                <div class="timeline-time">
+                                    <span id="current-time-speech">0:00</span>
+                                    <span id="duration-speech">0:00</span>
+                                </div>
+                            </div>
+                            <div class="player-volume">
+                                <button class="volume-btn" onclick="toggleMute('speech')">
+                                    <i class="fas fa-volume-up" id="volume-icon-speech"></i>
+                                </button>
+                                <input type="range" class="volume-slider" id="volume-speech" min="0" max="100"
+                                    value="100" onchange="changeVolume('speech')">
+                            </div>
+                        </div>
+                        <div class="audio-wave">
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                        </div>
+                        <div class="subtitles-display" id="subtitles-speech">
+                            <p class="subtitle-text"></p>
+                        </div>
+                    </div>
+                    <div class="transcript-container">
+                        <button class="transcript-toggle" onclick="toggleTranscript()">
+                            <span id="transcript-toggle-text"><i class="fas fa-file-alt"></i> عرض النص الكامل</span>
+                            <i class="fas fa-chevron-down" id="transcript-arrow"></i>
+                        </button>
+                        <div class="transcript-content" id="transcript-content">
+                            <div class="transcript-text">
+                                <p><strong>النص الكامل للخطاب:</strong></p>
+                                <p>في هذا اليوم… لا نحتفل فقط بتاريخٍ كُتب… بل نحتفل بأيدٍ ستكتب ما بعده.</p>
+                                <p>في هذا اليوم… نتذكر رجلاً بنى… ورجالاً حملوا… ونحن جيلٌ أقسم ألا يترك الشعلة تنطفئ.
+                                </p>
+                                <p>في العشرين من نوفمبر… نحن لا نُعيد مجرد ذكرى، بل نُعيد وعداً: أن تظل هذه الأرض عالية…
+                                    وهذه الراية خفّاقة… وهذا الوطن ممتداً في قلوبنا قبل خرائطنا.</p>
+                                <p>ونعدكم… أننا سنكون جيلاً يبني، يفكر… يعمل… يتقدم… ويحمل المشعل بيدٍ لا ترتجف، وقلبٍ
+                                    لا يتراجع، وروحٍ لا تنكسر.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Film Section -->
+    <section class="final-film" id="final-film">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">النتيجة النهائية</span>
+                <h2 class="section-title">الفيلم الكامل</h2>
+            </div>
+
+            <div class="film-container" id="filmContainer">
+                <div class="film-locked" id="filmLocked">
+                    <div class="lock-icon"><i class="fas fa-lock"></i></div>
+                    <h3>الفيلم مقفل</h3>
+                    <p>شاهد جميع المحتويات لفتح الفيلم النهائي</p>
+                    <div class="unlock-progress">
+                        <div class="unlock-progress-bar">
+                            <div class="unlock-progress-fill" id="unlockProgressFill"></div>
+                        </div>
+                        <p class="unlock-text">
+                            <span id="unlockViewedCount">0</span> / <span id="unlockTotalCount">0</span> تم المشاهدة
+                        </p>
+                    </div>
+                </div>
+
+                <div class="film-unlocked" id="filmUnlocked" style="display: none;">
+                    <div class="unlock-celebration">
+                        <div class="celebration-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>تم فتح الفيلم!</h3>
+                        <p>شكراً لمشاهدة رحلة الإبداع</p>
+                    </div>
+                    <div class="video-placeholder">
+                        <div class="video-placeholder-icon"><i class="fas fa-film"></i></div>
+                        <h4>قريباً</h4>
+                        <p>الفيلم قيد التصدير - سيتم إضافة الفيلم النهائي هنا بعد التصدير من برنامج المونتاج</p>
+                        <div class="video-info">
+                            <div class="video-info-item">
+                                <span class="video-info-label">التنسيق:</span>
+                                <span class="video-info-value">MP4</span>
+                            </div>
+                            <div class="video-info-item">
+                                <span class="video-info-label">تاريخ الإنتاج:</span>
+                                <span class="video-info-value">٢٨ نوفمبر ٢٠٢٥</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Uncomment when video is ready -->
+                    <!-- <video controls class="final-video">
+                        <source src="final-film.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credits Section -->
+    <section class="credits" id="credits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">الاعتمادات</span>
+                <h2 class="section-title">عن الفيلم</h2>
+            </div>
+
+            <div class="credits-grid">
+                <div class="credits-card">
+                    <h3>الإنتاج</h3>
+                    <div class="credits-item">
+                        <span class="credits-label">الطالب:</span>
+                        <span class="credits-value">يوسف محمد صبح</span>
+                    </div>
+                    <div class="credits-item">
+                        <span class="credits-label">الصف:</span>
+                        <span class="credits-value">العاشر</span>
+                    </div>
+                    <div class="credits-item">
+                        <span class="credits-label">المدرسة:</span>
+                        <span class="credits-value">مدرسة الإمام المهنا بن سلطان</span>
+                    </div>
+                    <div class="credits-item">
+                        <span class="credits-label">تاريخ الإنتاج:</span>
+                        <span class="credits-value">٢٨ نوفمبر ٢٠٢٥</span>
+                    </div>
+                </div>
+
+                <div class="credits-card">
+                    <h3>التقنيات المستخدمة</h3>
+                    <div class="credits-item">
+                        <span class="credits-label">تحويل الصور:</span>
+                        <span class="credits-value">الذكاء الاصطناعي</span>
+                    </div>
+                    <div class="credits-item">
+                        <span class="credits-label">التحريك:</span>
+                        <span class="credits-value">الذكاء الاصطناعي</span>
+                    </div>
+                    <div class="credits-item">
+                        <span class="credits-label">الخط المستخدم:</span>
+                        <span class="credits-value">ARB</span>
+                    </div>
+                </div>
+
+                <div class="credits-card">
+                    <h3>ملاحظات مهمة</h3>
+                    <ul class="credits-notes">
+                        <li>صور الشخصيات الحقيقية تم تشويشها حتى الحصول على إذن وللحفاظ على الخصوصية</li>
+                        <li>بعض الشخصيات لم تُدرج في الفيلم بسبب عدم الحصول على الإذن</li>
+                        <li>تم إنشاء الفيلم في يوم واحد فقط</li>
+                        <li>جميع التحويلات تمت باستخدام تقنيات الذكاء الاصطناعي</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="credits-footer">
+                <div class="poetry-section">
+                    <div class="poetry-icon"><i class="fas fa-feather-alt"></i></div>
+                    <div class="poetry-content">
+                        <p class="poetry-line">من مصرَ جاءَ الفنُّ هديّةً لعُمانَ أرضَ الكرامةِ،</p>
+                        <p class="poetry-line">لأهلِها الطيبينَ، حبًّا وفخرًا وعزًّا لا يزولُ.</p>
+                    </div>
+                </div>
+                
+                <!-- Social Share -->
+                <div class="social-share">
+                    <p class="share-title">شارك هذا العمل</p>
+                    <div class="share-buttons">
+                        <button class="share-btn" onclick="shareWebsite()" title="مشاركة">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <button class="share-btn" onclick="window.print()" title="طباعة">
+                            <i class="fas fa-print"></i>
+                        </button>
+                        <button class="share-btn" onclick="downloadProgress()" title="تحميل التقدم">
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <p>© ٢٠٢٥ يوسف محمد صبح - جميع الحقوق محفوظة</p>
+                <p class="credits-subtitle"><i class="fas fa-heart"></i> صُنع بكل حب في سلطنة عُمان</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Modal -->
+    <div class="modal" id="comparisonModal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="modal-header">
+                <h3 id="modalTitle">مقارنة التحويل</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-main-image">
+                    <img id="modalMainImage" src="" alt="الصورة الرئيسية" />
+                </div>
+            </div>
+            <div class="comparison-slider-container">
+                <img-comparison-slider class="comparison-slider" value="50">
+                    <img slot="first" id="modalConvertedImage" src="" alt="بعد التحويل بالذكاء الاصطناعي" />
+                    <img slot="second" id="modalRealImage" src="" alt="الصورة الأصلية" />
+                    <div slot="handle" class="slider-handle">
+                        <i class="fas fa-arrows-alt-h"></i>
+                    </div>
+                </img-comparison-slider>
+                <div class="comparison-labels">
+                    <div class="label-after">
+                        <i class="fas fa-magic"></i>
+                        <span>بعد التحويل</span>
+                    </div>
+                    <div class="label-before">
+                        <i class="fas fa-camera"></i>
+                        <span>الصورة الأصلية</span>
+                    </div>
+                </div>
+                <div class="comparison-labels">
+                    <span class="label-before"><i class="fas fa-camera"></i> الصورة الأصلية</span>
+                    <span class="label-after"><i class="fas fa-magic"></i> بعد التحويل بالذكاء الاصطناعي</span>
+                </div>
+            </div>
+            <div class="modal-video" id="modalVideo" style="display: none;">
+                <h4><i class="fas fa-play-circle"></i> الفيديو المحول</h4>
+                <div class="video-player-wrapper">
+                    <video id="modalVideoPlayer" poster="" controls>
+                        <source src="" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Character Comparison Modal -->
+    <div class="modal" id="characterModal">
+        <div class="modal-overlay" onclick="closeCharacterModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCharacterModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="modal-header">
+                <h3 id="characterModalTitle">مقارنة الشخصية</h3>
+            </div>
+            <div class="modal-body">
+                <div class="character-comparison-grid" id="characterComparisonGrid">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Message Modal -->
+    <div class="modal" id="welcomeModal">
+        <div class="modal-overlay" onclick="closeWelcomeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeWelcomeModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="modal-header">
+                <h3>أهلاً بكم</h3>
+            </div>
+            <div class="modal-body">
+                <div class="welcome-message">
+                    <p>هذا الفيلم القصير، «خيط النور»، هو ثمرة يومٍ واحد من العمل المتفاني، وُلد من حبّنا لعُمان وأهلها الكرام. حاولت من خلاله أن أروي قصة وطن، وأن أصنع لوحة فنية تجمع بين الواقع والخيال، مستخدمًا تقنيات الذكاء الاصطناعي لإحياء الصور وتحويلها إلى عالمٍ ثلاثي الأبعاد ينبض بالحياة.</p>
+                    
+                    <p>أهداء هذا العمل من مصر إلى سلطنة عمان، كتعبيرٍ صادق عن المحبة، الفخر، والتقدير للعلاقات الأخوية العريقة بين بلدينا. أمل أن يجد المشاهد في كل لقطة، في كل حركة، وفي كل صورة، لمحةً من هذا الحب والاحترام، وأن يستمتع بالرحلة البصرية والسمعية التي حاولت أن أبتكرها بعناية.</p>
+                    
+                    <p>شكرًا لكم على مشاهدة هذا العمل، وعلى دعمكم للقصص التي تخلّد جمال وطننا وروح أبنائه.</p>
+                    
+                    <p style="margin-top: 2rem; text-align: center; color: var(--color-secondary); font-weight: 600;">
+                        مع خالص الامتنان،<br>
+                        يوسف محمد صبح<br>
+                        الصف العاشر – مدرسة الإمام المهنا بن سلطان
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Comparison Slider Script -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
