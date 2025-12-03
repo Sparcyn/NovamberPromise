@@ -8,7 +8,7 @@
         content="رحلة خلف الكواليس - فيلم عُمان القصير | كيف تحولت الصور الحقيقية إلى رسوم متحركة ثلاثية الأبعاد بالذكاء الاصطناعي">
     <meta name="author" content="يوسف محمد صبح">
     <title>خلف الكواليس - فيلم عُمان القصير</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Font Awesome for high-quality icons -->
@@ -18,18 +18,6 @@
 </head>
 
 <body>
-    <!-- Progress Bar -->
-    <div class="progress-container" id="progressContainer">
-        <div class="progress-bar" id="progressBar"></div>
-        <div class="progress-text" id="progressText">
-            <i class="fas fa-eye"></i>
-            <span id="viewedCount">0</span> / <span id="totalCount">0</span> تم المشاهدة
-            <span style="margin: 0 0.5rem;">•</span>
-            <i class="fas fa-percentage"></i>
-            <span id="progressPercentage">0%</span>
-        </div>
-    </div>
-
     <!-- Navigation Icons -->
     <nav class="floating-nav" id="floatingNav">
         <button class="nav-icon-btn" onclick="showWelcomeMessage()" title="رسالة الترحيب">
@@ -50,6 +38,9 @@
         <button class="nav-icon-btn" onclick="scrollToSection('final-film')" title="الفيلم">
             <i class="fas fa-film"></i>
         </button>
+        <button class="nav-icon-btn" onclick="scrollToSection('posters')" title="الملصقات">
+            <i class="fas fa-image"></i>
+        </button>
         <button class="nav-icon-btn theme-toggle" onclick="toggleTheme()" title="تبديل الوضع">
             <i class="fas fa-moon"></i>
         </button>
@@ -63,10 +54,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-badge">فيلم قصير</div>
-            <h1 class="hero-title">
-                <span class="title-line">رحلة خلف</span>
-                <span class="title-line highlight">الكواليس</span>
-            </h1>
+            <h1 class="hero-title">خلف الكواليس</h1>
             <p class="hero-subtitle">من الواقع إلى الخيال • بالذكاء الاصطناعي</p>
             <div class="hero-meta">
                 <div class="meta-item">
@@ -102,13 +90,13 @@
     </section>
 
     <!-- Journey Section -->
-    <section class="journey" id="journey">
+    <section class="journey section-spacing" id="journey">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">القصة</span>
                 <h2 class="section-title">رحلة الإبداع</h2>
                 <p class="section-description">
-                    في يوم واحد، تحولت الصور الحقيقية إلى عالم من الرسوم المتحركة الثلاثية الأبعاد
+                    تحويل الصور الحقيقية إلى رسوم متحركة ثلاثية الأبعاد في يوم واحد
                 </p>
             </div>
 
@@ -119,8 +107,8 @@
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <div class="timeline-content">
-                        <h4>الفكرة</h4>
-                        <p>بدأت الفكرة بحلم بسيط</p>
+                        <h3>الفكرة</h3>
+                        <p>ولادة فكرة تحويل الواقع إلى فن رقمي</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -128,8 +116,8 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="timeline-content">
-                        <h4>جمع الشخصيات من الواقع</h4>
-                        <p>تصوير الشخصيات الحقيقية</p>
+                        <h3>جمع الشخصيات</h3>
+                        <p>تصوير الشخصيات الحقيقية من المدرسة</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -137,8 +125,8 @@
                         <i class="fas fa-pen"></i>
                     </div>
                     <div class="timeline-content">
-                        <h4>كتابة السيناريو</h4>
-                        <p>تطوير القصة والحوار</p>
+                        <h3>كتابة السيناريو</h3>
+                        <p>تطوير قصة تحتفي بالعيد الوطني</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -146,8 +134,8 @@
                         <i class="fas fa-magic"></i>
                     </div>
                     <div class="timeline-content">
-                        <h4>توليد صور المشاهد</h4>
-                        <p>تحويل الصور بالذكاء الاصطناعي</p>
+                        <h3>توليد المشاهد</h3>
+                        <p>تحويل الصور باستخدام الذكاء الاصطناعي</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -155,8 +143,8 @@
                         <i class="fas fa-video"></i>
                     </div>
                     <div class="timeline-content">
-                        <h4>تحويل الصور إلى فيديوهات</h4>
-                        <p>تحريك المشاهد بالذكاء الاصطناعي</p>
+                        <h3>التحريك</h3>
+                        <p>إضافة الحركة للمشاهد بتقنيات الذكاء الاصطناعي</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -164,8 +152,8 @@
                         <i class="fas fa-film"></i>
                     </div>
                     <div class="timeline-content">
-                        <h4>المونتاج</h4>
-                        <p>تجميع المشاهد والمونتاج النهائي</p>
+                        <h3>المونتاج</h3>
+                        <p>دمج المشاهد والموسيقى والصوت</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -173,8 +161,8 @@
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <div class="timeline-content">
-                        <h4>الإنجاز</h4>
-                        <p>تمام الساعة ١١:٠٠ مساءً بتوقيت عُمان</p>
+                        <h3>الإنجاز</h3>
+                        <p>اكتمال الفيلم في ٢٤ ساعة</p>
                     </div>
                 </div>
             </div>
@@ -206,31 +194,31 @@
             <div class="journey-grid">
                 <div class="journey-card">
                     <div class="journey-icon"><i class="fas fa-camera-retro"></i></div>
-                    <h3>الخطوة الأولى</h3>
-                    <p>التقاط الصور الحقيقية من الأماكن والشخصيات في عُمان</p>
+                    <h3>التصوير</h3>
+                    <p>التقاط صور حقيقية من أماكن وشخصيات عُمانية</p>
                 </div>
                 <div class="journey-card">
                     <div class="journey-icon"><i class="fas fa-robot"></i></div>
-                    <h3>التحويل بالذكاء الاصطناعي</h3>
-                    <p>تحويل الصور إلى رسوم كرتونية ثلاثية الأبعاد باستخدام تقنيات الذكاء الاصطناعي</p>
+                    <h3>التحويل</h3>
+                    <p>تحويل الصور إلى رسوم ثلاثية الأبعاد بالذكاء الاصطناعي</p>
                 </div>
                 <div class="journey-card">
                     <div class="journey-icon"><i class="fas fa-video"></i></div>
-                    <h3>التحريك والإنتاج</h3>
-                    <p>تحريك الشخصيات والمشاهد بالذكاء الاصطناعي لإنتاج الفيلم النهائي</p>
+                    <h3>الإنتاج</h3>
+                    <p>تحريك المشاهد ودمجها في فيلم متكامل</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Places Section -->
-    <section class="places" id="places">
+    <section class="places section-spacing" id="places">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">الأماكن</span>
                 <h2 class="section-title">تحويل الأماكن</h2>
                 <p class="section-description">
-                    شاهد كيف تحولت الأماكن الحقيقية في عُمان إلى مشاهد كرتونية ساحرة
+                    مقارنة بين الصور الحقيقية والنسخ المحولة بالذكاء الاصطناعي
                 </p>
             </div>
 
@@ -263,21 +251,24 @@
                 <div class="place-card" data-item-id="place-arab-sea" data-place-id="arab-sea" data-category="converted">
                     <div class="place-image-container">
                         <img-comparison-slider class="card-comparison-slider" value="50">
-                            <img slot="first" src="Places Converted/Converted/Arab Sea.png"
-                                alt="البحر العربي - بعد التحويل" class="place-image" />
-                            <img slot="second" src="Places Converted/REAL/Arab sea.jpg"
-                                alt="البحر العربي - الصورة الأصلية" class="place-image-real" />
+                            <img slot="first" src="./assets/images/locations/converted/Arab Sea.png"
+                                alt="البحر العربي محول إلى رسوم متحركة بالذكاء الاصطناعي" class="place-image" />
+                            <img slot="second" src="./assets/images/locations/original/Arab sea.jpg"
+                                alt="البحر العربي - الصورة الأصلية الحقيقية" class="place-image-real" />
                         </img-comparison-slider>
-                        <button class="preview-btn" onclick="openComparison('arab-sea')" title="معاينة كاملة">
+                        <button class="preview-btn" onclick="openComparison('arab-sea')" 
+                            title="معاينة كاملة" aria-label="عرض مقارنة البحر العربي بحجم كامل">
                             <i class="fas fa-expand"></i>
                         </button>
-                        <button class="video-play-btn-card" onclick="playPlaceVideo('arab-sea')" title="تشغيل الفيديو"
+                        <button class="video-play-btn-card" onclick="playPlaceVideo('arab-sea')" 
+                            title="تشغيل الفيديو" aria-label="تشغيل فيديو البحر العربي"
                             style="display: none;">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
                     <div class="place-content">
                         <h3 class="place-name">البحر العربي</h3>
+                        <p class="place-description">مشهد من الفيلم - تحويل بالذكاء الاصطناعي</p>
                     </div>
                 </div>
 
@@ -285,9 +276,9 @@
                 <div class="place-card" data-item-id="place-misfat" data-place-id="misfat" data-category="converted">
                     <div class="place-image-container">
                         <img-comparison-slider class="card-comparison-slider" value="50">
-                            <img slot="first" src="Places Converted/Converted/Misfat-Al-Abriyeen – Oman's Mountain Oasis Village.png"
+                            <img slot="first" src="./assets/images/locations/converted/Misfat-Al-Abriyeen – Oman's Mountain Oasis Village.png"
                                 alt="مسفاة العبريين - بعد التحويل" class="place-image" />
-                            <img slot="second" src="Places Converted/REAL/Misfat-Al-Abriyeen – Oman's Mountain Oasis Village.webp"
+                            <img slot="second" src="./assets/images/locations/original/Misfat-Al-Abriyeen – Oman's Mountain Oasis Village.webp"
                                 alt="مسفاة العبريين - الصورة الأصلية" class="place-image-real" />
                         </img-comparison-slider>
                         <button class="preview-btn" onclick="openComparison('misfat')" title="معاينة كاملة">
@@ -299,6 +290,7 @@
                     </div>
                     <div class="place-content">
                         <h3 class="place-name">مسفاة العبريين</h3>
+                        <p class="place-description">قرية جبلية تاريخية - مشهد رئيسي في الفيلم</p>
                     </div>
                 </div>
 
@@ -306,9 +298,9 @@
                 <div class="place-card" data-item-id="place-nazwa1" data-place-id="nazwa1" data-category="converted">
                     <div class="place-image-container">
                         <img-comparison-slider class="card-comparison-slider" value="50">
-                            <img slot="first" src="Places Converted/Converted/Nazwa 1.png" alt="نزوى 1 - بعد التحويل"
+                            <img slot="first" src="./assets/images/locations/converted/Nazwa 1.png" alt="نزوى 1 - بعد التحويل"
                                 class="place-image" />
-                            <img slot="second" src="Places Converted/REAL/Nazwa 1.png" alt="نزوى 1 - الصورة الأصلية"
+                            <img slot="second" src="./assets/images/locations/original/Nazwa 1.png" alt="نزوى 1 - الصورة الأصلية"
                                 class="place-image-real" />
                         </img-comparison-slider>
                         <button class="preview-btn" onclick="openComparison('nazwa1')" title="معاينة كاملة">
@@ -320,7 +312,7 @@
                     </div>
                     <div class="place-content">
                         <h3 class="place-name">نزوى 1</h3>
-                        <span class="inspiration-badge">مصدر إلهام للمكان</span>
+                        <p class="place-description">مصدر إلهام - معالم تاريخية من نزوى</p>
                     </div>
                 </div>
 
@@ -328,9 +320,9 @@
                 <div class="place-card" data-item-id="place-nazwa2" data-place-id="nazwa2" data-category="converted">
                     <div class="place-image-container">
                         <img-comparison-slider class="card-comparison-slider" value="50">
-                            <img slot="first" src="Places Converted/Converted/Nazwa 2.png" alt="نزوى 2 - بعد التحويل"
+                            <img slot="first" src="./assets/images/locations/converted/Nazwa 2.png" alt="نزوى 2 - بعد التحويل"
                                 class="place-image" />
-                            <img slot="second" src="Places Converted/REAL/Nazwa 2.png" alt="نزوى 2 - الصورة الأصلية"
+                            <img slot="second" src="./assets/images/locations/original/Nazwa 2.png" alt="نزوى 2 - الصورة الأصلية"
                                 class="place-image-real" />
                         </img-comparison-slider>
                         <button class="preview-btn" onclick="openComparison('nazwa2')" title="معاينة كاملة">
@@ -342,6 +334,7 @@
                     </div>
                     <div class="place-content">
                         <h3 class="place-name">نزوى 2</h3>
+                        <p class="place-description">مشهد من الفيلم - أسواق نزوى التقليدية</p>
                     </div>
                 </div>
 
@@ -349,9 +342,9 @@
                 <div class="place-card" data-item-id="place-nazwa3" data-place-id="nazwa3" data-category="converted">
                     <div class="place-image-container">
                         <img-comparison-slider class="card-comparison-slider" value="50">
-                            <img slot="first" src="Places Converted/Converted/Nazwa 3.png" alt="نزوى 3 - بعد التحويل"
+                            <img slot="first" src="./assets/images/locations/converted/Nazwa 3.png" alt="نزوى 3 - بعد التحويل"
                                 class="place-image" />
-                            <img slot="second" src="Places Converted/REAL/Nazwa 3.png" alt="نزوى 3 - الصورة الأصلية"
+                            <img slot="second" src="./assets/images/locations/original/Nazwa 3.png" alt="نزوى 3 - الصورة الأصلية"
                                 class="place-image-real" />
                         </img-comparison-slider>
                         <button class="preview-btn" onclick="openComparison('nazwa3')" title="معاينة كاملة">
@@ -363,7 +356,7 @@
                     </div>
                     <div class="place-content">
                         <h3 class="place-name">نزوى 3</h3>
-                        <span class="inspiration-badge">مصدر إلهام للمكان</span>
+                        <p class="place-description">مصدر إلهام - قلعة نزوى الشهيرة</p>
                     </div>
                 </div>
 
@@ -371,9 +364,9 @@
                 <div class="place-card" data-item-id="place-sohar" data-place-id="sohar" data-category="converted">
                     <div class="place-image-container">
                         <img-comparison-slider class="card-comparison-slider" value="50">
-                            <img slot="first" src="Places Converted/Converted/Suhar fort.png"
+                            <img slot="first" src="./assets/images/locations/converted/Suhar fort.png"
                                 alt="قلعة صحار - بعد التحويل" class="place-image" />
-                            <img slot="second" src="Places Converted/REAL/Museum of Sohar Fort.webp"
+                            <img slot="second" src="./assets/images/locations/original/Museum of Sohar Fort.webp"
                                 alt="قلعة صحار - الصورة الأصلية" class="place-image-real" />
                         </img-comparison-slider>
                         <button class="preview-btn" onclick="openComparison('sohar')" title="معاينة كاملة">
@@ -385,67 +378,68 @@
                     </div>
                     <div class="place-content">
                         <h3 class="place-name">قلعة صحار</h3>
+                        <p class="place-description">معلم تاريخي - مشهد افتتاحي في الفيلم</p>
                     </div>
                 </div>
 
                 <!-- Film Locations -->
                 <div class="place-card" data-item-id="place-bathroom" data-category="film">
                     <div class="place-image-container">
-                        <img src="Places on the film/BathRoom.png" alt="الحمام" class="place-image">
-                        <button class="preview-btn" onclick="previewImage('Places on the film/BathRoom.png', 'الحمام')"
+                        <img src="./assets/images/scenes/BathRoom.png" alt="مشهد الحمام - تصميم داخلي بالذكاء الاصطناعي" class="place-image">
+                        <button class="preview-btn" onclick="previewImage('./assets/images/scenes/BathRoom.png', 'الحمام')"
                             title="معاينة كاملة">
                             <i class="fas fa-expand"></i>
                         </button>
                     </div>
                     <div class="place-content">
                         <h3 class="place-name">الحمام</h3>
-                        <span class="film-badge">مشهد من الفيلم</span>
+                        <p class="place-description">مشهد داخلي - تصميم بالذكاء الاصطناعي</p>
                     </div>
                 </div>
 
                 <div class="place-card" data-item-id="place-bus" data-category="film">
                     <div class="place-image-container">
-                        <img src="Places on the film/Bus Station.png" alt="محطة الحافلات" class="place-image">
+                        <img src="./assets/images/scenes/Bus Station.png" alt="محطة الحافلات - مشهد رئيسي من الفيلم" class="place-image">
                         <button class="preview-btn"
-                            onclick="previewImage('Places on the film/Bus Station.png', 'محطة الحافلات')"
+                            onclick="previewImage('./assets/images/scenes/Bus Station.png', 'محطة الحافلات')"
                             title="معاينة كاملة">
                             <i class="fas fa-expand"></i>
                         </button>
                     </div>
                     <div class="place-content">
                         <h3 class="place-name">محطة الحافلات</h3>
-                        <span class="film-badge">مشهد من الفيلم</span>
+                        <p class="place-description">مشهد رئيسي - بداية رحلة البطل</p>
                     </div>
                 </div>
 
                 <div class="place-card" data-item-id="place-room" data-category="film">
                     <div class="place-image-container">
-                        <img src="Places on the film/Youssef Room.jpg" alt="غرفة يوسف" class="place-image">
+                        <img src="./assets/images/scenes/Youssef Room.jpg" alt="غرفة يوسف" class="place-image">
                         <button class="preview-btn"
-                            onclick="previewImage('Places on the film/Youssef Room.jpg', 'غرفة يوسف')"
+                            onclick="previewImage('./assets/images/scenes/Youssef Room.jpg', 'غرفة يوسف')"
                             title="معاينة كاملة">
                             <i class="fas fa-expand"></i>
                         </button>
                     </div>
                     <div class="place-content">
                         <h3 class="place-name">غرفة يوسف</h3>
-                        <span class="film-badge">مشهد من الفيلم</span>
+                        <p class="place-description">مشهد افتتاحي - غرفة الشخصية الرئيسية</p>
                     </div>
                 </div>
 
                 <!-- Oman Mall -->
                 <div class="place-card" data-item-id="place-mall" data-category="film">
                     <div class="place-image-container">
-                        <img src="Places Converted/Converted/Oman Mall.jpg" alt="عمان مول" class="place-image">
+                        <img src="./assets/images/locations/converted/Oman Mall.jpg" alt="عمان مول" class="place-image">
                         <button class="preview-btn"
-                            onclick="previewImage('Places Converted/Converted/Oman Mall.jpg', 'عمان مول')"
+                            onclick="previewImage('./assets/images/locations/converted/Oman Mall.jpg', 'عمان مول')"
                             title="معاينة كاملة">
                             <i class="fas fa-expand"></i>
                         </button>
                     </div>
                     <div class="place-content">
                         <h3 class="place-name">عمان مول</h3>
-                        <span class="film-badge">مشهد من الفيلم</span>
+                        <p class="place-description">مشهد حضري - مركز تجاري عصري</p>
                     </div>
                 </div>
             </div>
@@ -453,13 +447,13 @@
     </section>
 
     <!-- Characters Section -->
-    <section class="characters" id="characters">
+    <section class="characters section-spacing" id="characters">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">الشخصيات</span>
                 <h2 class="section-title">تحويل الشخصيات</h2>
                 <p class="section-description">
-                    من الواقع إلى عالم الرسوم المتحركة - شاهد كيف تحولت الشخصيات الحقيقية
+                    تحويل الشخصيات الحقيقية إلى رسوم متحركة بالذكاء الاصطناعي
                 </p>
             </div>
 
@@ -467,10 +461,10 @@
                 <!-- Youssef -->
                 <div class="character-card" data-item-id="char-youssef">
                     <div class="character-image-container">
-                        <img src="شخصيات في الفيلم/Converted/Youssef.png" alt="يوسف - نسخة الذكاء الاصطناعي"
+                        <img src="./assets/images/characters/converted/Youssef.png" alt="يوسف صبح - الشخصية الرئيسية محولة بالذكاء الاصطناعي إلى رسوم متحركة"
                             class="character-image">
                         <button class="preview-btn"
-                            onclick="previewCharacterImage('شخصيات في الفيلم/Converted/Youssef.png', 'يوسف صبح')"
+                            onclick="previewCharacterImage('./assets/images/characters/converted/Youssef.png', 'يوسف صبح')"
                             title="معاينة كاملة">
                             <i class="fas fa-expand"></i>
                         </button>
@@ -484,8 +478,8 @@
                 <!-- Mr. Waleed Al-Ghafri -->
                 <div class="character-card" data-item-id="char-waleed" data-character-id="waleed">
                     <div class="character-image-container">
-                        <img src="شخصيات في الفيلم/Converted/أ.وليد الغافري.jpg"
-                            alt="أ. وليد الغافري - نسخة الذكاء الاصطناعي" class="character-image">
+                        <img src="./assets/images/characters/converted/أ.وليد الغافري.jpg"
+                            alt="أ. وليد الغافري - المدير المساعد محول بالذكاء الاصطناعي" class="character-image">
                         <div class="version-buttons">
                             <button class="version-btn active" onclick="switchCharacterVersion('waleed', 0)">v1</button>
                             <button class="version-btn" onclick="switchCharacterVersion('waleed', 1)">v2</button>
@@ -503,7 +497,7 @@
                 <!-- Mr. Sulaiman Al-Jabri -->
                 <div class="character-card" data-item-id="char-sulaiman" data-character-id="sulaiman">
                     <div class="character-image-container">
-                        <img src="شخصيات في الفيلم/Converted/أ.سليمان الجابري.png"
+                        <img src="./assets/images/characters/converted/صورة و اقعيةبالذكاء الاصطناعي اهذا ل أ.سليمان الجابري.jpg"
                             alt="أ. سليمان الجابري - نسخة الذكاء الاصطناعي" class="character-image">
                         <button class="preview-btn" onclick="openCharacterComparison('sulaiman')" title="معاينة كاملة">
                             <i class="fas fa-expand"></i>
@@ -518,7 +512,7 @@
                 <!-- T. Khaled Al-Hassani -->
                 <div class="character-card" data-item-id="char-khaled" data-character-id="khaled">
                     <div class="character-image-container">
-                        <img src="شخصيات في الفيلم/Converted/T.Khaled Al-Hassani.png"
+                        <img src="./assets/images/characters/converted/T.Khaled Al-Hassani.png"
                             alt="أ. خالد الحسني - نسخة الذكاء الاصطناعي" class="character-image">
                         <div class="version-buttons">
                             <button class="version-btn active" onclick="switchCharacterVersion('khaled', 0)">v1</button>
@@ -538,7 +532,7 @@
                 <!-- Stu -->
                 <div class="character-card" data-item-id="char-stu" data-character-id="stu">
                     <div class="character-image-container">
-                        <img src="شخصيات في الفيلم/Converted/Stu.jpg" alt="Stu - نسخة الذكاء الاصطناعي"
+                        <img src="./assets/images/characters/converted/Stu.jpg" alt="Stu - نسخة الذكاء الاصطناعي"
                             class="character-image">
                         <div class="version-buttons">
                             <button class="version-btn active" onclick="switchCharacterVersion('stu', 0)">v1</button>
@@ -557,7 +551,7 @@
                 <!-- T. Omar Alzahiri (Not in film) -->
                 <div class="character-card not-included" data-item-id="char-omar" data-character-id="omar">
                     <div class="character-image-container">
-                        <img src="شخصيات في الفيلم/Converted/T.Omar Alzahiri.png"
+                        <img src="./assets/images/characters/converted/T.Omar Alzahiri.png"
                             alt="أ. عمر الظاهري - نسخة الذكاء الاصطناعي" class="character-image">
                         <div class="not-included-badge"><i class="fas fa-ban"></i> لم يُدرج في الفيلم</div>
                         <button class="preview-btn" onclick="openCharacterComparison('omar')" title="معاينة كاملة">
@@ -577,13 +571,12 @@
                     <span class="section-badge">عرض توضيحي</span>
                     <h3>القدرات الواقعية للذكاء الاصطناعي</h3>
                     <p>
-                        بسبب أسلوب الرسم المستخدم، لم نتمكن من تحديد ملامح الوجه بوضوح تام.
-                        لإظهار قدراتنا، قمنا بإنشاء صورة واقعية باستخدام الذكاء الاصطناعي وعرضناها على المدير.
+                        يمكن للذكاء الاصطناعي إنشاء صور واقعية بدقة عالية. هذه نسخة واقعية تم إنشاؤها لإظهار إمكانيات التقنية.
                     </p>
                     <div class="ai-demo-image" data-item-id="ai-demo">
-                        <img src="شخصيات في الفيلم/Converted/صورة و اقعيةبالذكاء الاصطناعي اهذا ل أ.سليمان الجابري.jpg"
+                        <img src="./assets/images/characters/converted/صورة و اقعيةبالذكاء الاصطناعي اهذا ل أ.سليمان الجابري.jpg"
                             alt="صورة واقعية بالذكاء الاصطناعي - أ. سليمان الجابري">
-                        <div class="ai-demo-label">صورة واقعية بالذكاء الاصطناعي - أ. سليمان الجابري</div>
+                        <div class="ai-demo-label">نموذج واقعي بالذكاء الاصطناعي</div>
                     </div>
                 </div>
             </div>
@@ -591,13 +584,13 @@
     </section>
 
     <!-- Audio Section -->
-    <section class="audio" id="audio">
+    <section class="audio section-spacing" id="audio">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">الصوتيات</span>
-                <h2 class="section-title">تجربة صوتية</h2>
+                <h2 class="section-title">الموسيقى والخطاب</h2>
                 <p class="section-description">
-                    استمع إلى الموسيقى والخطاب المستخدم في الفيلم
+                    استمع إلى الموسيقى التصويرية والخطاب الوطني المستخدم في الفيلم
                 </p>
             </div>
 
@@ -612,7 +605,7 @@
                         </div>
                     </div>
                     <div class="premium-player" id="premium-player-oman">
-                        <audio id="audio-oman-player" src="الاصوات/عمان الأبية (320 KBps).mp3"></audio>
+                        <audio id="audio-oman-player" src="./assets/audio/عمان الأبية (320 KBps).mp3"></audio>
                         <div class="player-controls">
                             <button class="play-btn" onclick="togglePlay('oman')">
                                 <i class="fas fa-play" id="play-icon-oman"></i>
@@ -654,7 +647,7 @@
                         </div>
                     </div>
                     <div class="premium-player" id="premium-player-speech">
-                        <audio id="audio-speech-player" src="الاصوات/خطاب يوسف في الاذاعة المدرسية.mp3"></audio>
+                        <audio id="audio-speech-player" src="./assets/audio/خطاب يوسف في الاذاعة المدرسية.mp3"></audio>
                         <div class="player-controls">
                             <button class="play-btn" onclick="togglePlay('speech')">
                                 <i class="fas fa-play" id="play-icon-speech"></i>
@@ -710,208 +703,437 @@
         </div>
     </section>
 
-<div class="film-container" id="filmContainer">
-    <div class="film-link">
-        <h3>مشاهدة الفيلم</h3>
-        <p>يمكنك مشاهدة الفيلم مباشرة عبر الرابط التالي:</p>
+    <!-- Final Film Section -->
+    <section class="final-film section-spacing" id="final-film"></section>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">الفيلم النهائي</span>
+                <h2 class="section-title">خيط النور</h2>
+                <p class="section-description">
+                    شاهد الفيلم الكامل - رحلة إبداعية من الواقع إلى الخيال
+                </p>
+            </div>
 
-        <a href="https://drive.google.com/file/d/1y2P8crlwikM3166L1vMVk4RSeQHms5hv/view?usp=sharing" 
-           target="_blank" 
-           class="watch-button"
-           style="
-                display:inline-block;
-                padding:12px 20px;
-                background:#007bff;
-                color:white;
-                text-decoration:none;
-                border-radius:6px;
-                font-size:16px;
-                margin-top:10px;
-           ">
-            اضغط هنا لمشاهدة الفيلم
-        </a>
-    </div>
-</div>
-
-                    <div class="video-placeholder">
-                        <div class="video-placeholder-icon"><i class="fas fa-film"></i></div>
-                        <h4>قريباً</h4>
-                        <p>الفيلم قيد التصدير - سيتم إضافة الفيلم النهائي هنا بعد التصدير من برنامج المونتاج</p>
-                        <div class="video-info">
-                            <div class="video-info-item">
-                                <span class="video-info-label">التنسيق:</span>
-                                <span class="video-info-value">MP4</span>
-                            </div>
-                            <div class="video-info-item">
-                                <span class="video-info-label">تاريخ الإنتاج:</span>
-                                <span class="video-info-value">٢٨ نوفمبر ٢٠٢٥</span>
-                            </div>
+            <div class="full-film-player">
+                <div class="film-player-wrapper">
+                    <div class="film-aspect-ratio">
+                        <iframe
+                            src="https://drive.google.com/file/d/1y2P8crlwikM3166L1vMVk4RSeQHms5hv/preview"
+                            allow="autoplay; fullscreen; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy"
+                            title="مشاهدة فيلم خيط النور - الفيلم الكامل">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="film-info">
+                    <div class="film-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>المدة: 3 دقائق</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>٢٨ نوفمبر ٢٠٢٥</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-film"></i>
+                            <span>إنتاج: يوسف محمد صبح</span>
                         </div>
                     </div>
-                    <!-- Uncomment when video is ready -->
-                    <!-- <video controls class="final-video">
-                        <source src="final-film.mp4" type="video/mp4">
-                        متصفحك لا يدعم تشغيل الفيديو.
-                    </video> -->
+                    <p class="film-description">
+                        فيلم قصير يحتفي بالعيد الوطني العُماني، تم إنتاجه بالكامل باستخدام تقنيات الذكاء الاصطناعي في 24 ساعة فقط.
+                        تحويل الصور الحقيقية إلى رسوم متحركة ثلاثية الأبعاد، مع موسيقى وصوت احترافي.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posters Section -->
+    <section class="posters section-spacing" id="posters">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">الملصقات</span>
+                <h2 class="section-title">لوحات نوفمبر</h2>
+                <p class="section-description">
+                    مجموعة ملصقات فنية احتفالاً بالعيد الوطني المجيد
+                </p>
+                            </div>
+
+            <div class="posters-grid">
+                <div class="poster-card" data-item-id="poster-ahlam">
+                    <div class="poster-image-container">
+                        <img src="./assets/images/Posters/أحلام الصغار في نور الهلال.png" alt="ملصق أحلام الصغار في نور الهلال - تصميم فني احتفالاً بالعيد الوطني"
+                            class="poster-image" />
+                        <button class="poster-preview-btn"
+                            onclick="previewImage('./assets/images/Posters/أحلام الصغار في نور الهلال.png','أحلام الصغار في نور الهلال')"
+                            aria-label="عرض ملصق أحلام الصغار في نور الهلال بحجم كامل">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                            </div>
+                    <div class="poster-content">
+                        <h3 class="poster-title">أحلام الصغار في نور الهلال</h3>
+                        <p class="poster-description">تصميم رقمي - احتفاء بالأجيال القادمة</p>
+                        </div>
+                    </div>
+
+                <div class="poster-card" data-item-id="poster-ahl-oman">
+                    <div class="poster-image-container">
+                        <img src="./assets/images/Posters/أهل عُمان عهدٌ يتجدد.png" alt="أهل عُمان عهدٌ يتجدد"
+                            class="poster-image" />
+                        <button class="poster-preview-btn"
+                            onclick="previewImage('./assets/images/Posters/أهل عُمان عهدٌ يتجدد.png','أهل عُمان عهدٌ يتجدد')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="poster-content">
+                        <h3 class="poster-title">أهل عُمان عهدٌ يتجدد</h3>
+                    </div>
+                </div>
+
+                <div class="poster-card" data-item-id="poster-ishraqa">
+                    <div class="poster-image-container">
+                        <img src="./assets/images/Posters/إشراقة الوعد مجد نوفمبر.png" alt="إشراقة الوعد مجد نوفمبر"
+                            class="poster-image" />
+                        <button class="poster-preview-btn"
+                            onclick="previewImage('./assets/images/Posters/إشراقة الوعد مجد نوفمبر.png','إشراقة الوعد مجد نوفمبر')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="poster-content">
+                        <h3 class="poster-title">إشراقة الوعد مجد نوفمبر</h3>
+                    </div>
+                </div>
+
+                <div class="poster-card" data-item-id="poster-taj">
+                    <div class="poster-image-container">
+                        <img src="./assets/images/Posters/تاج الأرض عُمان رمز السيادة.png"
+                            alt="تاج الأرض عُمان رمز السيادة" class="poster-image" />
+                        <button class="poster-preview-btn"
+                            onclick="previewImage('./assets/images/Posters/تاج الأرض عُمان رمز السيادة.png','تاج الأرض عُمان رمز السيادة')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="poster-content">
+                        <h3 class="poster-title">تاج الأرض عُمان رمز السيادة</h3>
+                    </div>
+                </div>
+
+                <div class="poster-card" data-item-id="poster-tatweej">
+                    <div class="poster-image-container">
+                        <img src="./assets/images/Posters/تتويج المجد في قلب العالم.png"
+                            alt="تتويج المجد في قلب العالم" class="poster-image" />
+                        <button class="poster-preview-btn"
+                            onclick="previewImage('./assets/images/Posters/تتويج المجد في قلب العالم.png','تتويج المجد في قلب العالم')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="poster-content">
+                        <h3 class="poster-title">تتويج المجد في قلب العالم</h3>
+                    </div>
+                </div>
+
+                <div class="poster-card" data-item-id="poster-khanjar">
+                    <div class="poster-image-container">
+                        <img src="./assets/images/Posters/خنجر المجد إرث وضاء.png" alt="خنجر المجد إرث وضاء"
+                            class="poster-image" />
+                        <button class="poster-preview-btn"
+                            onclick="previewImage('./assets/images/Posters/خنجر المجد إرث وضاء.png','خنجر المجد إرث وضاء')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="poster-content">
+                        <h3 class="poster-title">خنجر المجد إرث وضاء</h3>
+                    </div>
+                </div>
+
+                <div class="poster-card" data-item-id="poster-raya">
+                    <div class="poster-image-container">
+                        <img src="./assets/images/Posters/راية العز فوق قلاع عُمان.png"
+                            alt="راية العز فوق قلاع عُمان" class="poster-image" />
+                        <button class="poster-preview-btn"
+                            onclick="previewImage('./assets/images/Posters/راية العز فوق قلاع عُمان.png','راية العز فوق قلاع عُمان')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="poster-content">
+                        <h3 class="poster-title">راية العز فوق قلاع عُمان</h3>
+                    </div>
+                </div>
+
+                <div class="poster-card" data-item-id="poster-nahr">
+                    <div class="poster-image-container">
+                        <img src="./assets/images/Posters/نهر الذهب نحو شموخ الوطن.png"
+                            alt="نهر الذهب نحو شموخ الوطن" class="poster-image" />
+                        <button class="poster-preview-btn"
+                            onclick="previewImage('./assets/images/Posters/نهر الذهب نحو شموخ الوطن.png','نهر الذهب نحو شموخ الوطن')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="poster-content">
+                        <h3 class="poster-title">نهر الذهب نحو شموخ الوطن</h3>
+                    </div>
+                </div>
+
+                <div class="poster-card" data-item-id="poster-hilal">
+                    <div class="poster-image-container">
+                        <img src="./assets/images/Posters/هلال نوفمبر فرحة النشء.png" alt="هلال نوفمبر فرحة النشء"
+                            class="poster-image" />
+                        <button class="poster-preview-btn"
+                            onclick="previewImage('./assets/images/Posters/هلال نوفمبر فرحة النشء.png','هلال نوفمبر فرحة النشء')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="poster-content">
+                        <h3 class="poster-title">هلال نوفمبر فرحة النشء</h3>
+                    </div>
+                </div>
+
+                <div class="poster-card" data-item-id="poster-tadarru">
+                    <div class="poster-image-container">
+                        <img src="./assets/images/Posters/تضرع الأبناء وميض الأمل.png"
+                            alt="تضرع الأبناء وميض الأمل" class="poster-image" />
+                        <button class="poster-preview-btn"
+                            onclick="previewImage('./assets/images/Posters/تضرع الأبناء وميض الأمل.png','تضرع الأبناء وميض الأمل')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="poster-content">
+                        <h3 class="poster-title">تضرع الأبناء وميض الأمل</h3>
+                    </div>
+                </div>
+
+                <div class="poster-card" data-item-id="poster-qalb">
+                    <div class="poster-image-container">
+                        <img src="./assets/images/Posters/قلب الأمة تجلي العظماء.png" alt="قلب الأمة تجلي العظماء"
+                            class="poster-image" />
+                        <button class="poster-preview-btn"
+                            onclick="previewImage('./assets/images/Posters/قلب الأمة تجلي العظماء.png','قلب الأمة تجلي العظماء')">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                    <div class="poster-content">
+                        <h3 class="poster-title">قلب الأمة تجلي العظماء</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Credits Section -->
-    <section class="credits" id="credits">
+    <section class="credits section-spacing" id="credits">
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">الاعتمادات</span>
                 <h2 class="section-title">عن الفيلم</h2>
+                <p class="section-description">رحلة إبداعية من القلب إلى الشاشة</p>
             </div>
 
+            <!-- Hero Credits Card -->
+            <div class="credits-hero">
+                <div class="credits-hero-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="credits-hero-title">يوسف محمد صبح</h3>
+                <p class="credits-hero-subtitle">طالب الصف العاشر</p>
+                <div class="credits-hero-divider"></div>
+                <p class="credits-hero-school">مدرسة الإمام المهنا بن سلطان</p>
+                <div class="credits-hero-date">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>٢٨ نوفمبر ٢٠٢٥</span>
+                </div>
+            </div>
+
+            <!-- Credits Grid -->
             <div class="credits-grid">
                 <div class="credits-card">
-                    <h3>الإنتاج</h3>
-                    <div class="credits-item">
-                        <span class="credits-label">الطالب:</span>
-                        <span class="credits-value">يوسف محمد صبح</span>
+                    <div class="credits-card-icon">
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <div class="credits-item">
-                        <span class="credits-label">الصف:</span>
-                        <span class="credits-value">العاشر</span>
-                    </div>
-                    <div class="credits-item">
-                        <span class="credits-label">المدرسة:</span>
-                        <span class="credits-value">مدرسة الإمام المهنا بن سلطان</span>
-                    </div>
-                    <div class="credits-item">
-                        <span class="credits-label">تاريخ الإنتاج:</span>
-                        <span class="credits-value">٢٨ نوفمبر ٢٠٢٥</span>
-                    </div>
-                </div>
-
-                <div class="credits-card">
                     <h3>التقنيات المستخدمة</h3>
-                    <div class="credits-item">
-                        <span class="credits-label">تحويل الصور:</span>
-                        <span class="credits-value">الذكاء الاصطناعي</span>
-                    </div>
-                    <div class="credits-item">
-                        <span class="credits-label">التحريك:</span>
-                        <span class="credits-value">الذكاء الاصطناعي</span>
-                    </div>
-                    <div class="credits-item">
-                        <span class="credits-label">الخط المستخدم:</span>
-                        <span class="credits-value">ARB</span>
+                    <div class="credits-items">
+                        <div class="credits-item">
+                            <i class="fas fa-magic"></i>
+                            <div class="credits-item-content">
+                                <span class="credits-label">تحويل الصور</span>
+                                <span class="credits-value">الذكاء الاصطناعي</span>
+                            </div>
+                        </div>
+                        <div class="credits-item">
+                            <i class="fas fa-video"></i>
+                            <div class="credits-item-content">
+                                <span class="credits-label">التحريك</span>
+                                <span class="credits-value">الذكاء الاصطناعي</span>
+                            </div>
+                        </div>
+                        <div class="credits-item">
+                            <i class="fas fa-font"></i>
+                            <div class="credits-item-content">
+                                <span class="credits-label">الخط</span>
+                                <span class="credits-value">Ahlan World</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="credits-card">
+                    <div class="credits-card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>إحصائيات الإنتاج</h3>
+                    <div class="credits-items">
+                        <div class="credits-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="credits-item-content">
+                                <span class="credits-label">مدة الإنتاج</span>
+                                <span class="credits-value">٢٤ ساعة</span>
+                            </div>
+                        </div>
+                        <div class="credits-item">
+                            <i class="fas fa-images"></i>
+                            <div class="credits-item-content">
+                                <span class="credits-label">الصور المحولة</span>
+                                <span class="credits-value">١٦ صورة</span>
+                            </div>
+                        </div>
+                        <div class="credits-item">
+                            <i class="fas fa-users"></i>
+                            <div class="credits-item-content">
+                                <span class="credits-label">الشخصيات</span>
+                                <span class="credits-value">٦ شخصيات</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="credits-card">
+                    <div class="credits-card-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
                     <h3>ملاحظات مهمة</h3>
                     <ul class="credits-notes">
-                        <li>صور الشخصيات الحقيقية تم تشويشها حتى الحصول على إذن وللحفاظ على الخصوصية</li>
-                        <li>بعض الشخصيات لم تُدرج في الفيلم بسبب عدم الحصول على الإذن</li>
-                        <li>تم إنشاء الفيلم في يوم واحد فقط</li>
-                        <li>جميع التحويلات تمت باستخدام تقنيات الذكاء الاصطناعي</li>
+                        <li>
+                            <i class="fas fa-shield-alt"></i>
+                            <span>الصور الحقيقية محمية للخصوصية</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-bolt"></i>
+                            <span>إنتاج الفيلم في ٢٤ ساعة</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-brain"></i>
+                            <span>جميع التحويلات بالذكاء الاصطناعي</span>
+                        </li>
                     </ul>
                 </div>
             </div>
 
+            <!-- Poetry Section -->
             <div class="credits-footer">
                 <div class="poetry-section">
-                    <div class="poetry-icon"><i class="fas fa-feather-alt"></i></div>
+                    <div class="poetry-icon">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
                     <div class="poetry-content">
-                        <p class="poetry-line">من مصرَ جاءَ الفنُّ هديّةً لعُمانَ أرضَ الكرامةِ،</p>
-                        <p class="poetry-line">لأهلِها الطيبينَ، حبًّا وفخرًا وعزًّا لا يزولُ.</p>
+                        <p class="poetry-line">من مصرَ جاءَ الفنُّ هديّةً لعُمانَ أرضَ الكرامةِ</p>
+                        <p class="poetry-line">لأهلِها الطيبينَ، حبًّا وفخرًا وعزًّا لا يزولُ</p>
                     </div>
                 </div>
                 
-                <!-- Social Share -->
-                <div class="social-share">
-                    <p class="share-title">شارك هذا العمل</p>
-                    <div class="share-buttons">
-                        <button class="share-btn" onclick="shareWebsite()" title="مشاركة">
-                            <i class="fas fa-share-alt"></i>
-                        </button>
-                        <button class="share-btn" onclick="window.print()" title="طباعة">
-                            <i class="fas fa-print"></i>
-                        </button>
-                        <button class="share-btn" onclick="downloadProgress()" title="تحميل التقدم">
-                            <i class="fas fa-download"></i>
-                        </button>
-                    </div>
-                </div>
+                <div class="footer-divider"></div>
                 
-                <p>© ٢٠٢٥ يوسف محمد صبح - جميع الحقوق محفوظة</p>
-                <p class="credits-subtitle"><i class="fas fa-heart"></i> صُنع بكل حب في سلطنة عُمان</p>
+                <p class="footer-copyright">
+                    <i class="fas fa-copyright"></i>
+                    ٢٠٢٥ يوسف محمد صبح • مدرسة الإمام المهنا بن سلطان
+                </p>
+                <p class="footer-tagline">
+                    <i class="fas fa-heart"></i>
+                    صُنع بكل حب في سلطنة عُمان
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Comparison Modal -->
+    <!-- Comparison Modal - Redesigned -->
     <div class="modal" id="comparisonModal">
         <div class="modal-overlay" onclick="closeModal()"></div>
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeModal()" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
             </button>
+            
             <div class="modal-header">
-                <h3 id="modalTitle">مقارنة التحويل</h3>
+                <div class="modal-badge">
+                    <i class="fas fa-magic"></i>
+                    <span>تحويل بالذكاء الاصطناعي</span>
+                </div>
+                <h2 id="modalTitle" class="modal-title">مقارنة التحويل</h2>
             </div>
-            <div class="modal-body">
+
+            <div class="modal-content">
+                <!-- Main Image Display -->
                 <div class="modal-main-image">
                     <img id="modalMainImage" src="" alt="الصورة الرئيسية" />
                 </div>
-            </div>
-            <div class="comparison-slider-container">
-                <img-comparison-slider class="comparison-slider" value="50">
-                    <img slot="first" id="modalConvertedImage" src="" alt="بعد التحويل بالذكاء الاصطناعي" />
-                    <img slot="second" id="modalRealImage" src="" alt="الصورة الأصلية" />
-                    <div slot="handle" class="slider-handle">
-                        <i class="fas fa-arrows-alt-h"></i>
+
+                <!-- Comparison Slider -->
+                <div class="comparison-slider-container">
+                    <div class="comparison-slider-wrapper">
+                        <img-comparison-slider class="comparison-slider" value="50">
+                            <img slot="first" id="modalConvertedImage" src="" alt="بعد التحويل بالذكاء الاصطناعي" />
+                            <img slot="second" id="modalRealImage" src="" alt="الصورة الأصلية" />
+                            <div slot="handle" class="slider-handle">
+                                <i class="fas fa-arrows-alt-h"></i>
+                            </div>
+                        </img-comparison-slider>
                     </div>
-                </img-comparison-slider>
-                <div class="comparison-labels">
-                    <div class="label-after">
-                        <i class="fas fa-magic"></i>
-                        <span>بعد التحويل</span>
-                    </div>
-                    <div class="label-before">
-                        <i class="fas fa-camera"></i>
-                        <span>الصورة الأصلية</span>
+                    <div class="comparison-labels">
+                        <div class="label-before">
+                            <i class="fas fa-camera"></i>
+                            <span>الصورة الأصلية</span>
+                        </div>
+                        <div class="label-after">
+                            <i class="fas fa-magic"></i>
+                            <span>بعد التحويل</span>
+                        </div>
                     </div>
                 </div>
-                <div class="comparison-labels">
-                    <span class="label-before"><i class="fas fa-camera"></i> الصورة الأصلية</span>
-                    <span class="label-after"><i class="fas fa-magic"></i> بعد التحويل بالذكاء الاصطناعي</span>
-                </div>
-            </div>
-            <div class="modal-video" id="modalVideo" style="display: none;">
-                <h4><i class="fas fa-play-circle"></i> الفيديو المحول</h4>
-                <div class="video-player-wrapper">
-                    <video id="modalVideoPlayer" poster="" controls>
-                        <source src="" type="video/mp4">
-                        متصفحك لا يدعم تشغيل الفيديو.
-                    </video>
+
+                <!-- Video Player -->
+                <div class="modal-video" id="modalVideo" style="display: none;">
+                    <div class="video-header">
+                        <i class="fas fa-play-circle"></i>
+                        <h4>الفيديو المحول</h4>
+                    </div>
+                    <div class="video-player-wrapper">
+                        <video id="modalVideoPlayer" poster="" controls>
+                            <source src="" type="video/mp4">
+                            متصفحك لا يدعم تشغيل الفيديو.
+                        </video>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Character Comparison Modal -->
+    <!-- Character Comparison Modal - Redesigned -->
     <div class="modal" id="characterModal">
         <div class="modal-overlay" onclick="closeCharacterModal()"></div>
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeCharacterModal()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeCharacterModal()" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
             </button>
+            
             <div class="modal-header">
-                <h3 id="characterModalTitle">مقارنة الشخصية</h3>
+                <div class="modal-badge">
+                    <i class="fas fa-user-circle"></i>
+                    <span>نسخ الشخصية</span>
+                </div>
+                <h2 id="characterModalTitle" class="modal-title">مقارنة الشخصية</h2>
             </div>
-            <div class="modal-body">
+
+            <div class="modal-content">
                 <div class="character-comparison-grid" id="characterComparisonGrid">
                     <!-- Will be populated by JavaScript -->
                 </div>

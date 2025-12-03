@@ -10,73 +10,77 @@ const VIEWABLE_ITEMS = [
     // Audio
     'audio-oman', 'audio-speech',
     // AI Demo
-    'ai-demo'
+    'ai-demo',
+    // Posters
+    'poster-ahlam', 'poster-ahl-oman', 'poster-ishraqa', 'poster-taj',
+    'poster-tatweej', 'poster-khanjar', 'poster-raya', 'poster-nahr',
+    'poster-hilal', 'poster-tadarru', 'poster-qalb'
 ];
 
 const PLACE_DATA = {
     'arab-sea': {
         title: 'البحر العربي',
-        real: 'Places Converted/REAL/Arab sea.jpg',
-        converted: 'Places Converted/Converted/Arab Sea.png',
-        video: 'Places Converted/Converted/arab sea video.mp4'
+        real: './assets/images/locations/original/Arab sea.jpg',
+        converted: './assets/images/locations/converted/Arab Sea.png',
+        video: './assets/images/locations/converted/arab sea video.mp4'
     },
     'misfat': {
         title: 'مسفاة العبريين',
-        real: 'Places Converted/REAL/Misfat-Al-Abriyeen – Oman\'s Mountain Oasis Village.webp',
-        converted: 'Places Converted/Converted/Misfat-Al-Abriyeen – Oman\'s Mountain Oasis Village.png',
-        video: 'Places Converted/Converted/Misfat-Al-Abriyeen – Oman\'s Mountain Oasis Village.mp4'
+        real: './assets/images/locations/original/Misfat-Al-Abriyeen – Oman\'s Mountain Oasis Village.webp',
+        converted: './assets/images/locations/converted/Misfat-Al-Abriyeen – Oman\'s Mountain Oasis Village.png',
+        video: './assets/images/locations/converted/Misfat-Al-Abriyeen – Oman\'s Mountain Oasis Village.mp4'
     },
     'nazwa1': {
         title: 'نزوى 1',
-        real: 'Places Converted/REAL/Nazwa 1.png',
-        converted: 'Places Converted/Converted/Nazwa 1.png',
-        video: 'Places Converted/Converted/Nazwa 1.mp4'
+        real: './assets/images/locations/original/Nazwa 1.png',
+        converted: './assets/images/locations/converted/Nazwa 1.png',
+        video: './assets/images/locations/converted/Nazwa 1.mp4'
     },
     'nazwa2': {
         title: 'نزوى 2',
-        real: 'Places Converted/REAL/Nazwa 2.png',
-        converted: 'Places Converted/Converted/Nazwa 2.png',
-        video: 'Places Converted/Converted/Nazwa 2.mp4'
+        real: './assets/images/locations/original/Nazwa 2.png',
+        converted: './assets/images/locations/converted/Nazwa 2.png',
+        video: './assets/images/locations/converted/Nazwa 2.mp4'
     },
     'nazwa3': {
         title: 'نزوى 3',
-        real: 'Places Converted/REAL/Nazwa 3.png',
-        converted: 'Places Converted/Converted/Nazwa 3.png',
-        video: 'Places Converted/Converted/Nazwa 3.mp4'
+        real: './assets/images/locations/original/Nazwa 3.png',
+        converted: './assets/images/locations/converted/Nazwa 3.png',
+        video: './assets/images/locations/converted/Nazwa 3.mp4'
     },
     'sohar': {
         title: 'قلعة صحار',
-        real: 'Places Converted/REAL/Museum of Sohar Fort.webp',
-        converted: 'Places Converted/Converted/Suhar fort.png',
-        video: 'Places Converted/Converted/Suhar fort.mp4'
+        real: './assets/images/locations/original/Museum of Sohar Fort.webp',
+        converted: './assets/images/locations/converted/Suhar fort.png',
+        video: './assets/images/locations/converted/Suhar fort.mp4'
     }
 };
 
 const CHARACTER_DATA = {
     'waleed': {
         title: 'أ. وليد الغافري',
-        converted: ['شخصيات في الفيلم/Converted/أ.وليد الغافري.jpg', 'شخصيات في الفيلم/Converted/أ.وليد الغافري2.jpg'],
-        real: 'شخصيات في الفيلم/REAL/أ.وليد الغافري'
+        converted: ['./assets/images/characters/converted/أ.وليد الغافري.jpg', './assets/images/characters/converted/أ.وليد الغافري2.jpg'],
+        real: './assets/images/characters/original/أ.وليد الغافري'
     },
     'sulaiman': {
         title: 'أ. سليمان الجابري',
-        converted: ['شخصيات في الفيلم/Converted/أ.سليمان الجابري.png'],
-        real: 'شخصيات في الفيلم/REAL/أ.سليمان الجابري'
+        converted: ['./assets/images/characters/converted/أ.سليمان الجابري.png'],
+        real: './assets/images/characters/original/أ.سليمان الجابري'
     },
     'khaled': {
         title: 'أ. خالد الحسني',
-        converted: ['شخصيات في الفيلم/Converted/T.Khaled Al-Hassani.png', 'شخصيات في الفيلم/Converted/T.Khaled Al-Hassani Close-Up.png', 'شخصيات في الفيلم/Converted/خالد الحسني.jpg'],
-        real: 'شخصيات في الفيلم/REAL/T.Khaled Al-Hassani'
+        converted: ['./assets/images/characters/converted/T.Khaled Al-Hassani.png', './assets/images/characters/converted/T.Khaled Al-Hassani Close-Up.png', './assets/images/characters/converted/خالد الحسني.jpg'],
+        real: './assets/images/characters/original/T.Khaled Al-Hassani'
     },
     'stu': {
-        title: 'Stu',
-        converted: ['شخصيات في الفيلم/Converted/Stu.jpg', 'شخصيات في الفيلم/Converted/stu (close up).png'],
-        real: 'شخصيات في الفيلم/REAL/Stu'
+        title: 'مترف',
+        converted: ['./assets/images/characters/converted/Stu.jpg', './assets/images/characters/converted/stu (close up).png'],
+        real: './assets/images/characters/original/Stu'
     },
     'omar': {
         title: 'أ. عمر الظاهري',
-        converted: ['شخصيات في الفيلم/Converted/T.Omar Alzahiri.png'],
-        real: 'شخصيات في الفيلم/REAL/T.Omar Alzahiri'
+        converted: ['./assets/images/characters/converted/T.Omar Alzahiri.png'],
+        real: './assets/images/characters/original/T.Omar Alzahiri'
     }
 };
 
@@ -89,13 +93,11 @@ function loadProgress() {
     if (saved) {
         viewedItems = new Set(JSON.parse(saved));
     }
-    updateProgress();
 }
 
 // Save progress to localStorage
 function saveProgress() {
     localStorage.setItem('omanFilmProgress', JSON.stringify([...viewedItems]));
-    updateProgress();
 }
 
 // Mark item as viewed
@@ -109,34 +111,6 @@ function markAsViewed(itemId) {
         if (element) {
             element.classList.add('viewed');
         }
-    }
-}
-
-// Update progress bars
-function updateProgress() {
-    const total = VIEWABLE_ITEMS.length;
-    const viewed = viewedItems.size;
-    const percentage = (viewed / total) * 100;
-    
-    // Update top progress bar
-    document.documentElement.style.setProperty('--progress-width', `${percentage}%`);
-    document.getElementById('viewedCount').textContent = viewed;
-    document.getElementById('totalCount').textContent = total;
-    
-    // Update percentage display
-    const percentageElement = document.getElementById('progressPercentage');
-    if (percentageElement) {
-        percentageElement.textContent = Math.round(percentage) + '%';
-    }
-    
-    // Update unlock progress
-    document.documentElement.style.setProperty('--unlock-progress', `${percentage}%`);
-    document.getElementById('unlockViewedCount').textContent = viewed;
-    document.getElementById('unlockTotalCount').textContent = total;
-    
-    // Check if film should be unlocked
-    if (viewed === total) {
-        unlockFilm();
     }
 }
 
@@ -157,10 +131,11 @@ function unlockFilm() {
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
+        const progressHeight = document.getElementById('progressContainer')?.offsetHeight || 0;
+        const sectionTop = section.offsetTop - progressHeight - 20;
+        window.scrollTo({ top: sectionTop, behavior: 'smooth' });
     }
 }
-
 // ===== Modal Functions =====
 function openComparison(placeId) {
     const data = PLACE_DATA[placeId];
@@ -1010,6 +985,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadTheme();
     createScrollToTop();
     setupKeyboardShortcuts();
+    setupVideoButtons();
     
     // Animate stats when they come into view
     const statsObserver = new IntersectionObserver((entries) => {
@@ -1048,4 +1024,29 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('🎬 Behind the Scenes website loaded successfully!');
     console.log(`📊 Progress: ${viewedItems.size}/${VIEWABLE_ITEMS.length} items viewed`);
     console.log('✨ New features: Filter, Stats Counter, Theme Toggle, Scroll to Top, Keyboard Shortcuts');
+    console.log('🔓 Type unlockFilmNow() in console to unlock the film');
 });
+
+// ===== Console Command to Unlock Film =====
+window.unlockFilmNow = function() {
+    // Mark all items as viewed
+    VIEWABLE_ITEMS.forEach(itemId => {
+        viewedItems.add(itemId);
+    });
+    
+    // Save progress
+    saveProgress();
+    
+    // Unlock the film
+    unlockFilm();
+    
+    console.log('🎉 Film unlocked successfully!');
+    console.log('✅ All items marked as viewed');
+    
+    // Scroll to film section
+    setTimeout(() => {
+        scrollToSection('final-film');
+    }, 500);
+    
+    return '🎬 Enjoy the film!';
+};
